@@ -58,27 +58,47 @@ public class ClienteDaoJDBC {
     public Cliente encontrar ( Cliente cliente) {
         Connection conn = null;
         PreparedStatement stmt = null;
-        ResultSet rs = null;        
+        ResultSet rs = null;  
+        System.out.println("Entro a encontrar " + cliente.getIdCliente());
         try {
             
             conn = Conexiones.getConnection();
+            System.out.println("Paso 1 ");
             stmt = conn.prepareCall(SQL_SELECT_BY_ID);
+            System.out.println("Paso 2 ");
             stmt.setInt(1, cliente.getIdCliente());
+            System.out.println("Paso 3 ");
             rs = stmt.executeQuery();            
+            System.out.println("Paso 4 ");           
+            // rs.absolute(1);
+            System.out.println("Paso 4 ");
             
-            rs.absolute(1);
+            // String nombre = rs.getString("nombre");
+            // String apellido = rs.getString("apellido");            
+            // String email = rs.getString("email");
+            // String telefono = rs.getString("telefono");
+            // Double saldo = rs.getDouble("saldo");
             
-            String nombre = rs.getString("nombre");
-            String apellido = rs.getString("apellido");            
-            String email = rs.getString("email");
-            String telefono = rs.getString("telefono");
-            Double saldo = rs.getDouble("saldo");
-            
-            cliente.setNombre(nombre);
-            cliente.setApellido(apellido);            
-            cliente.setEmail(email);
-            cliente.setTelefono(telefono);
-            cliente.setSaldo(saldo);
+            // cliente.setNombre(nombre);
+            // cliente.setApellido(apellido);            
+            // cliente.setEmail(email);
+            // cliente.setTelefono(telefono);
+            // cliente.setSaldo(saldo);
+            while ( rs.next()) {                
+                String nombre = rs.getString("nombre");
+                String apellido = rs.getString("apellido");                
+                String email = rs.getString("email");
+                String telefono = rs.getString("telefono");
+                Double saldo = rs.getDouble("saldo");
+                
+                cliente.setNombre(nombre);
+                cliente.setApellido(apellido);            
+                cliente.setEmail(email);
+                cliente.setTelefono(telefono);
+                cliente.setSaldo(saldo);
+                
+                System.out.println("Paso 5 ");                                        
+            }
                                                    
                                                
         } catch (SQLException ex) {
@@ -149,11 +169,10 @@ public class ClienteDaoJDBC {
         Connection conn = null;
         PreparedStatement stmt = null;        
         int rows = 0; 
-        try {
-            
+        try {            
             conn = Conexiones.getConnection();
             stmt = conn.prepareCall(SQL_DELETE);            
-            stmt.setDouble(1,cliente.getSaldo());
+            stmt.setInt(1,cliente.getIdCliente());
             
             rows = stmt.executeUpdate();
                                                    
