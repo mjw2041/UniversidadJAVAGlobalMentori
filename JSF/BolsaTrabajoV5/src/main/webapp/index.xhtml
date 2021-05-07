@@ -5,7 +5,7 @@
     <head>
         <title>Hola Mundo JSF</title>
     </head>
-    <h:form>
+    <h:form id="vacanteForm">
         <h:messages globalOnly="true"></h:messages>
         <table>
             <tr>
@@ -41,6 +41,26 @@
                 </td>                                                  
                 <td><h:message for="fechaNacimiento"></h:message></td>
             </tr>
+            
+            <tr>                
+                <td><h:outputLabel for="codigoPostal" value="#{msgs['vacanteForm.codigoPostal']}"/></td>
+                <td><h:inputText id="codigoPostal" immediate = "true" onchange="this.form.submit" required="true" value="#{candidato.codigoPostal}" 
+                                 valueChangeListener="#{vacanteForm.codigoPostalListener}"> </h:inputText></td>
+                <td><h:message for="codigoPostal"></h:message></td>
+            </tr>
+            
+            <tr>
+               <td><h:outputLabel for="colonia" value="#{msgs['vacanteForm.colonia']}"/></td>
+               <td><h:inputText id="colonia" required = "true" value="#{candidato.colonia}" > </h:inputText></td>
+               <td><h:message for="colonia"></h:message></td>
+            </tr>
+            
+             <tr>
+               <td><h:outputLabel for="ciudad" value="#{msgs['vacanteForm.ciudad']}"/></td>
+               <td><h:inputText id="ciudad" required = "true" value="#{candidato.ciudad}"> </h:inputText></td>                               
+               <td><h:message for="ciudad"></h:message></td>
+            </tr>
+            
         </table>
         <h:commandButton action="#{vacanteForm.enviar}" value="#{msgs['vacanteForm.enviar']}"/>
     </h:form>
