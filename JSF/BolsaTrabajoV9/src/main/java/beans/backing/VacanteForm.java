@@ -1,6 +1,6 @@
-
 package beans.backing;
 
+import beans.helper.ColoniaHelper;
 import beans.model.Candidato;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
@@ -11,17 +11,19 @@ import javax.faces.event.ActionEvent;
 import javax.faces.event.ValueChangeEvent;
 import javax.inject.Inject;
 import javax.inject.Named;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 @Named
 @RequestScoped
 public class VacanteForm {
+
     @Inject
-    private Candidato candidato;      
+    private Candidato candidato;
     private boolean comentarioEnviado;
-    
-    public VacanteForm(){        
+
+    @Inject
+    private ColoniaHelper coloniaHelper;
+
+    public VacanteForm() {
     }
 
     public Candidato getCandidato() {
@@ -30,7 +32,7 @@ public class VacanteForm {
 
     public void setCandidato(Candidato candidato) {
         this.candidato = candidato;
-         
+
     }
 
     public boolean isComentarioEnviado() {
@@ -40,47 +42,51 @@ public class VacanteForm {
     public void setComentarioEnviado(boolean comentarioEnviado) {
         this.comentarioEnviado = comentarioEnviado;
     }
-    
-    
-    
+
+    public ColoniaHelper getColoniaHelper() {
+        return coloniaHelper;
+    }
+
+    public void setColoniaHelper(ColoniaHelper coloniaHelper) {
+        this.coloniaHelper = coloniaHelper;
+    }
+
     public String enviar() {
-        if ( this.candidato.getNombre().equals("Juan")) {
+        if (this.candidato.getNombre().equals("Juan")) {
             System.out.println("Hola");
-            if ( this.candidato.getApellido().equals("Perez")) {    
+            if (this.candidato.getApellido().equals("Perez")) {
                 String msg = "Gracias pero Juan Perez ya trabaja con nosotros";
                 FacesMessage facesMessage = new FacesMessage(FacesMessage.SEVERITY_ERROR, msg, msg);
                 FacesContext facesContext = FacesContext.getCurrentInstance();
                 String componentId = null;
                 facesContext.addMessage(componentId, facesMessage);
                 return "index";
-            }             
+            }
             return "exito";
-        } else {            
+        } else {
             return "fallo";
         }
-    }    
+    }
 
-    public void codigoPostalListener ( ValueChangeEvent valueChangeEvent) {
+    public void codigoPostalListener(ValueChangeEvent valueChangeEvent) {
         FacesContext facesContext = FacesContext.getCurrentInstance();
         UIViewRoot uiViewRoot = facesContext.getViewRoot();
-        String nuevoCodigoPostal = (String) valueChangeEvent.getNewValue();
-        if ( "2000".equals(nuevoCodigoPostal)) {
-            UIInput coloniaInputText = (UIInput) uiViewRoot.findComponent("vacanteForm:colonia");
-            String nuevaColonia = "Rosario 88";
-            coloniaInputText.setValue(nuevaColonia);
-            coloniaInputText.setSubmittedValue(nuevaColonia);
-            
-            UIInput ciudadInputText = (UIInput) uiViewRoot.findComponent("vacanteForm:ciudad");
-            String nuevaCiudad = "Santa Fe";
-            ciudadInputText.setValue(nuevaCiudad);
-            ciudadInputText.setSubmittedValue(nuevaCiudad);
-            
-            facesContext.renderResponse();
-            
-        }
-    }    
-    
-    public void ocultarComentario ( ActionEvent actionEvent ){
+        int nuevoCodigoPostal = ((Long) valueChangeEvent.getNewValue()).intValue();
+        UIInput coloniaidInputText = (UIInput) uiViewRoot.findComponent("vacanteForm:coloniaid");
+        int nuevacoloniaId = this.coloniaHelper.getColoniaIdPorCodigoPostal(nuevoCodigoPostal);
+        coloniaidInputText.setValue(nuevacoloniaId);
+        coloniaidInputText.setSubmittedValue(nuevacoloniaId);
+
+        UIInput ciudadInputText = (UIInput) uiViewRoot.findComponent("vacanteForm:ciudad");
+        String nuevaCiudad = "Rosario";
+        ciudadInputText.setValue(nuevaCiudad);
+        ciudadInputText.setSubmittedValue(nuevaCiudad);
+
+        facesContext.renderResponse();
+
+    }
+
+    public void ocultarComentario(ActionEvent actionEvent) {
         this.comentarioEnviado = !this.comentarioEnviado;
     }
 }

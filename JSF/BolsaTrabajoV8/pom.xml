@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>mx.com.gm</groupId>
-    <artifactId>BolsaTrabajoV7</artifactId>
+    <artifactId>BolsaTrabajoV8</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
 
-    <name>BolsaTrabajoV7</name>
+    <name>BolsaTrabajoV8</name>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>

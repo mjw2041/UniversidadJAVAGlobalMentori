@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns ="http://www.w3.org/1999/xhtml" 
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"> 
+    <head>
+        <title>Inicio</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <header th:replace="layout/plantilla :: header"> </header>
+        <a sec:authorize="hasRole('ROLE_ADMIN')"  th:href="@{/agregar}"> [[#{persona.crear}]] </a>
+        <div th:if="${personas != null and !personas.empty}">
+            <table border=1>
+                <tr>
+                    <th> [[#{persona.nombre}]] </th>
+                    <th> [[#{persona.apellido}]] </th>
+                    <th> [[#{persona.email}]] </th>
+                    <th> [[#{persona.telefono}]] </th>
+                    <th sec:authorize="hasRole('ROLE_ADMIN')"> [[#{accion.editar}]] </th>
+                    <th sec:authorize="hasRole('ROLE_ADMIN')"> [[#{accion.eliminar}]] </th>
+                </tr>
+
+                <tr th:each = "persona : ${personas}">                                  
+                    <td> <span th:text= "${persona.nombre}"></span> </td>                
+                    <td>  <span th:text="${persona.apellido}"></span> </td> 
+                    <td>  <span th:text="${persona.email}"></span> </td>
+                    <td>  <span th:text="${persona.telefono}"></span> </td> 
+                    <td sec:authorize="hasRole('ROLE_ADMIN')"> <a th:href="@{/editar/} + ${persona.idpersona}" />[[#{accion.editar}]]</td>  
+                    <td sec:authorize="hasRole('ROLE_ADMIN')"> <a th:href="@{/eliminar(idpersona=${persona.idpersona})}"/>[[#{accion.eliminar}]]</td>                                         
+                </tr> 
+            </table>                
+        </div>     
+        <h3 th:text= "${usuario.Username}">></h3>
+        
+        <div th:if="${personas == null or personas.empty}">
+             [[#{persona.listaVacia}]]
+        </div>    
+        <footer th:replace="layout/plantilla :: footer"> </footer>
+    </body>
+    
+</html>

@@ -11,8 +11,6 @@ import javax.faces.event.ActionEvent;
 import javax.faces.event.ValueChangeEvent;
 import javax.inject.Inject;
 import javax.inject.Named;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 @Named
 @RequestScoped
@@ -65,13 +63,15 @@ public class VacanteForm {
         UIViewRoot uiViewRoot = facesContext.getViewRoot();
         String nuevoCodigoPostal = (String) valueChangeEvent.getNewValue();
         if ( "2000".equals(nuevoCodigoPostal)) {
-            UIInput coloniaInputText = (UIInput) uiViewRoot.findComponent("vacanteForm:colonia");
-            String nuevaColonia = "Rosario 88";
-            coloniaInputText.setValue(nuevaColonia);
-            coloniaInputText.setSubmittedValue(nuevaColonia);
+            UIInput coloniaidInputText = (UIInput) uiViewRoot.findComponent("vacanteForm:coloniaid");            
+            
+            int nuevacoloniaId = 1;
+            coloniaidInputText.setValue(nuevacoloniaId);
+            coloniaidInputText.setSubmittedValue(nuevacoloniaId);
+            
             
             UIInput ciudadInputText = (UIInput) uiViewRoot.findComponent("vacanteForm:ciudad");
-            String nuevaCiudad = "Santa Fe";
+            String nuevaCiudad = "Rosario";
             ciudadInputText.setValue(nuevaCiudad);
             ciudadInputText.setSubmittedValue(nuevaCiudad);
             
