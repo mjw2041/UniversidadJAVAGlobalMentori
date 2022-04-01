@@ -45,15 +45,31 @@ class Persona {
         this.nombre = nombre;
         this.apellido = apellido;
     }
-}
+};
 console.log(Persona);
 console.log(typeof Persona);
 
 // Tipo undefined 
-var a;
-console.log(a);
-console.log(typeof a);
+var x;
+console.log(x);
+console.log(typeof x);
 
+x = undefined;
+console.log(x);
+console.log(typeof x);
 
+// null = ausencia de valor
+var y = null;
+console.log(y);
+console.log(typeof y);
 
- 
+/*** Arreglo */
+var autos = [];
+autos = ['BMW', 'Audi', 'Volvo'];
+console.log(autos);
+console.log(typeof autos);
+
+/** Asignar Cadenas vacias */
+var z = '';
+console.log(z);
+console.log(typeof z);
