@@ -2,60 +2,19 @@
 
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.logging.log4j.*;
+import org.apache.struts2.convention.annotation.Action;
+import org.apache.struts2.convention.annotation.Result;
 
-public class MostrarLoginAction extends ActionSupport{
+@Result(name="success", location="/WEB-INF/content/login.jsp")
     
-    Logger log = LogManager.getLogger(MostrarLoginAction.class);
-    
-    private String usuario;
-    private String password;
-    
-    @Override
-    public String execute(){
-        log.info("El usuario es " + this.usuario);        
-        log.info("El password es " + this.password);        
-        return SUCCESS;
-    }
+public class LoginAction extends ActionSupport{
 
-    public String getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
+    @Action("login")           
+    public String execute(){        
+            return SUCCESS;
+    
     }
     
-    public String getPassword() {
-        return this.password;
-    }
-    
-    public void  setPassword( String password){
-        this.password = password;
-    }
-    
-    public String getTitulo() {
-        /*return getText("form.titulo"); */
-         return getText("form.usuario"); 
-    }
-    
-    public String getTituloUsuario() {
-        return getText("form.usuario"); 
-    }
-/*    
-    public String getFormUsuario(){
-        return getText("form.usuario");
-    }
-*/    
-    public String getFormPassword(){
-        return getText("form.password");
-    }
-    
-    public String getBoton(){
-        return getText("form.boton");
-    }
-    
-    public String getValores(){
-        return getText("form.valores");
-    }
-           
+   
+ 
 }

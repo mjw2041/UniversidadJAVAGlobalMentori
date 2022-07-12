@@ -1,0 +1,14 @@
+MASA BRISEE ( GROSS )
+250 g harina
+5  g  de sal
+125 g manteca
+60 cc leche o agua fría
+2 yemas
+
+Disolver sal en la leche fría.
+Sablear la manteca fría y la harina hasta formar un arenado fino.
+Hacer una corona y colocar en el centro las yemas   y la leche.
+Tomar la masa rápidamente y enfriar cubierta con film.
+Forrar un molde de 22 a 24 cm de diámetro y enfriar. Picar la masa.
+Colocar papel aluminio y material de carga. Hornear 15 min a 180°C.
+Retirar todo y terminar la cocción.

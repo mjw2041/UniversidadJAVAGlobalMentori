@@ -1,3 +1,7 @@
+COMUNIDAD COTO
+Usuario: 22595052
+Contraseña: C2iu
+
 BANCO MACRO
 Usuario; lili1943
 Clave: Juane1975
@@ -28,11 +32,12 @@ MI ARGENTINA
 Pass: Juanca1936
 
 BANCO SANTA FE MAMA
-Usuario: liliw1943
-Clave: Juan1975
+Usuario: lili1943w
+Clave: Juane1975
 27047871056
+Imagen Sillos
 
-Debito 
+Debito
 2081
 BUO
 
@@ -75,7 +80,7 @@ USUARIO: mjw2041
 EMAIL mweihmuller72@gmail.com
 Contraseña: Juanca1936
 
-GIT 
+GIT
 Usuario mweihmuller72@hotmail.com
 Clave Para0726
 
@@ -84,7 +89,7 @@ Usuario mjw0726
 Mail mweihmuller72@hotmail.com
 Contraseña: Maxi0726
 
-API MAMA 
+API MAMA
 PARTIDA 16030121634100280
 
 TGI MAMA
@@ -92,7 +97,7 @@ Cuenta: 10790304
 Codigo Gestion: 0000770101
 
 LITORAL GAS
-CLIENTE: 
+CLIENTE:
 CONTRASEÑA: juanca1936
 ---------------------------
 
@@ -115,7 +120,7 @@ Para0726
 
 ---------------------------
 
-Invertir On Line 
+Invertir On Line
 maxi1972
 
 ---------------------------
@@ -147,8 +152,8 @@ b1cefalo
 ---------------------------
 
 SIGA Cliente
-covid019
-
+c1mb23y@
+DESA: ClaVE2022
 ---------------------------
 
 ICBC WEB
@@ -186,7 +191,8 @@ Cuenta Claro MAMA
 Usuario: mweihmuller72@hotmail.com
 Clava: juanca1936
 
----------------------------
+---------------------------
+
 
 TELECOM PAPA
 Usuario: mweihmuller72@gmail.com
@@ -212,17 +218,17 @@ mweihmuller72@gmail.com
 ---------------------------
 
 UMEDY MAXI
-Clave juanca1936 o maxi1972
+Clave p1s2y3
 mweihmuller72@hotmail.com
 
 ---------------------------
 
-Clave SQLTOOL 
+Clave SQLTOOL
 b1cefalo
 
 ================================================
 
-OBSOLETAS 
+OBSOLETAS
 
 ---------------------------
 claro
@@ -233,13 +239,15 @@ claro
 IAS016
 novi2015
 
----------------------------
+---------------------------
+
 
 PAYPAL
 Usuario: mweihmuller72@hotmail.com
 Clave: juanca1936
 
----------------------------
+---------------------------
+
 
 AMAZON
 Usuario: mweihmuller72@hotmail.com

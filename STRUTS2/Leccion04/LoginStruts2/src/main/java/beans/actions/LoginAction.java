@@ -3,9 +3,9 @@
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.logging.log4j.*;
 
-public class MostrarLoginAction extends ActionSupport{
+public class LoginAction extends ActionSupport{
     
-    Logger log = LogManager.getLogger(MostrarLoginAction.class);
+    Logger log = LogManager.getLogger(LoginAction.class);
     
     private String usuario;
     private String password;
@@ -33,28 +33,22 @@ public class MostrarLoginAction extends ActionSupport{
         this.password = password;
     }
     
-    public String getTitulo() {
-        /*return getText("form.titulo"); */
-         return getText("form.usuario"); 
+    public String getFormTitulo() {
+       return getText("form.titulo"); 
     }
     
-    public String getTituloUsuario() {
-        return getText("form.usuario"); 
-    }
-/*    
     public String getFormUsuario(){
         return getText("form.usuario");
     }
-*/    
     public String getFormPassword(){
         return getText("form.password");
     }
     
-    public String getBoton(){
+    public String getFormBoton(){
         return getText("form.boton");
     }
     
-    public String getValores(){
+    public String getFormValores(){
         return getText("form.valores");
     }
            

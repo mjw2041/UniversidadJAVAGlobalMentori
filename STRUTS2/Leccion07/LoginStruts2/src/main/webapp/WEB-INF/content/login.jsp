@@ -4,21 +4,16 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title><s:property value="Titulo"/></title>
-    </head>     
-        <h1><s:property value="Titulo"/></h1>
-        <s:form>            
-            <s:textfield key="form.usuario"  name = "usuario"/>                   
-            <s:password key="form.password" name="password"/>                            
+        <title><s:text name="form.titulo"/></title>
+        <s:head/>
+    </head>    
+    <body>
+        <h1><s:text name="form.titulo"/></h1>
+        <s:actionerror/>
+        <s:form action="validarUsuario">            
+            <s:textfield key="form.usuario" name="usuario"/>
+            <s:password key="form.password" name="password"/>            
             <s:submit key="form.boton" name="submit"/>
-        </s:form>
-        <br/>
-        <div>            
-            <s:property value="valores"/> 
-            <br/>            
-            <s:property value="Titulo"/>:<s:property value="usuario"/>     
-            <br/>
-            <s:textfield value="FormPassword"/>: <s:property value="password"/>     
-        </div>    
-    
+        </s:form>            
+    </body>
 </html>
