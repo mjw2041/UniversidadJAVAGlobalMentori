@@ -11,7 +11,7 @@ import javax.persistence.NamedQuery;
 
 @Entity
 @NamedQueries ({
-    @NamedQuery(name="persona.encontrarTodasPersonas", query="SELECT p FROM Persona p ORDER BY p.idpersona")
+    @NamedQuery(name="persona.encontrarTodasPersonas", query="SELECT p FROM Persona p ORDER BY p.idPersona")
 })
 public class Persona implements Serializable{
     
