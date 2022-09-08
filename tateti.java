@@ -61,7 +61,7 @@ Contraseña: caro1972
 
 UDEMY
 Email: mweihmuller72@hotmail.com
-Contraseña: caro1972
+Contraseña: p3r5ch1
 
 MYSQL
 Clave admin
