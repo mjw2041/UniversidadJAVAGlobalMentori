@@ -1,0 +1,39 @@
+h1{
+    text-align: center;
+    color: #d62828;
+}
+p{    
+    color:white;
+    background-color: #f77f00;
+    padding: 15px;
+    border: 10px solid #003049;  
+    /*
+    margin-top: 40px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    */
+    
+    /*
+    margin: 40px 20px 20px 10px;
+    */
+    
+    /*
+       Los paramstros son arriba derecha abajo izquierda, como las agujas de reloj
+    */
+    /*
+    margin: 40px 10px 20px;
+    */
+    /*
+       El parametro de derecha e izquierda se simplifican en el 2 parametro
+    */
+
+    margin: 40px 10px;
+    
+    /*
+       El parametro de derecha e izquierda se simplifican en el 2 parametro, el parametro arriba y abajo en el 1er parametro
+    */
+
+    margin: auto 40px;
+    text-align: center;
+} 

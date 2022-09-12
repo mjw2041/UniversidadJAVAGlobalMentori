@@ -1,0 +1,23 @@
+table {
+    width: 100%;
+}
+
+h1{
+    color:red;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    /*border-spacing: 10px;*/
+    padding: 10px;
+}
+/*
+td{
+    text-align: center;
+}
+
+th {
+    text-align: left;
+}
+*/
