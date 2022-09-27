@@ -1,3 +1,11 @@
+MERCADO LIBRE
+USUARIO:  mweihmuller72@hotmail.com
+PASS: choro1959
+
+HOTMAIL
+direccion: mweihmuller72@hotmail.com
+pass: choro1959
+
 LINKLIN 
 Tucu1925
 
@@ -16,8 +24,9 @@ Comida:LOCRO
 Vacaciones TANTI
 
 GMAIL
-mweihmuller72@gmail.com
-Mara2020
+email: mweihmuller72@gmail.com
+pass: Mara2020 ( Esta es la que funciona )
+choro1959 ( la genere cuando me robaron el celu, no se para que se usa )
 
 YAHOO
 mweihmuller72@yahoo.com.ar
@@ -47,6 +56,7 @@ BUO
 ORACLE
 email: mweihmuller72@hotmail.com
 psw: Caro1972!
+
 DROPBOX
 https://www.dropbox.com
 email: mweihmuller72@hotmail.com
@@ -139,11 +149,6 @@ caro1972
 
 ---------------------------
 
-GMAIL
-m1r2d3n4
-
----------------------------
-
 ZOOM
 Caro1972
 
@@ -162,15 +167,12 @@ DESA: ClaVE2022
 ICBC WEB
 Usuario cmsp2041
 Clave santi2001
-Caj 0726
+Caj 1943
 Alfa ANU
 
 
 ---------------------------
 
-Clave Cuenta PAPA Banco
-Usuario jcfw36
-Clave pilu2004
 
 ---------------------------
 
@@ -179,8 +181,6 @@ Para Pagar API Departamento
 
 ---------------------------
 
-Hotmail
-b1cefalo
 
 ---------------------------
 
@@ -267,3 +267,9 @@ Clave Juanca1936
 JUMBO
 Usuario: mweihmuller72@hotmail.com
 Clave: juanca1936
+
+---------------------------
+
+Clave Cuenta PAPA Banco
+Usuario jcfw36
+Clave pilu2004

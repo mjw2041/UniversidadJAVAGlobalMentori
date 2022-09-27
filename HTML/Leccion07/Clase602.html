@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios en HTML</title>
+</head>
+    <body>
+        <h1> Fomularios en HTML</h1>
+        <form method="POST">
+            <label for="nombre">Nombre: </label><br/>
+            <input type="text" id="nombre" value="Carolina" name="nombre" required="true"/><br/>
+
+            <label for="apellido">Apellido: </label><br/>
+            <input type="text" id="apellido" placeholder="Ingrese el apellido" name="apellido" required="true" /><br/>
+
+            <label for="password">Password </label><br/>
+            <input type="password" id="password" name="apellido" required="true" /><br/>
+
+
+            <input type="submit" value="enviar"/>
+            <input type="submit" value="enviar sin validar" formnovalidate="formnovalidate" />
+        </form>
+        
+    </body>
+</html>

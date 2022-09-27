@@ -1,0 +1,40 @@
+/* 
+ Es para todos los objetos
+*/
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+h1{
+    color: lightcoral;
+    margin: 30px;
+}
+
+/* Identificador CSS */
+#tituloPrincipal{
+    color: #f72585;
+    text-align: center;
+    margin: 15px;
+}
+
+h3{
+    color: #3f37c9;
+}
+
+p{
+    color: #457b9d
+}
+/* Clase CSS */
+.tarjeta{
+    border: 10px solid #560bad;
+    background-color: #f1faee;
+    text-align: center;
+    margin: 15px 100px;
+    padding: 15px;
+}
+
+.titulo {
+    color: #f72585;
+}
